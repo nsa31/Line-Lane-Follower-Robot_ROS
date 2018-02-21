@@ -1,9 +1,9 @@
-# Project : Pursuit-Evasion Robot Using ROS-Kobuki-Turtlebot
+# Project : Line-Lane-Follower-Robot Using ROS-Kobuki-Turtlebot
 The project is done at University of Alberta (UoA) for the course CMPUT 412 : Experimental Robotics.
 
 ## Overview
 
-The evasion robot tries to escape the pursuit robot and avoid any obstacle . The pursuit robot tries to catch the evasion robot at a safe deistance. The evasion robot has the wander or random walk property. On the other hand the pursuit robot has the follower proerty. Both of them use depth sensor for navigation.
+
 
 ## Dependencies
 
@@ -15,31 +15,24 @@ We tested our project on the following environment.
 * Matplotlib
 * OpenCV-Python 2.4.8
 
-How to configure onboard RasberryPi for WiFI:
-```
-ssh ubuntu@192.168.2.111
-
-
-```
 How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 ## How to run 
-### Evasion Robot
+### Line Following Robot
 ### Turtlebot Gazebo Simulation
 ```
-roslaunch turtlebot_gazebo turtlebot_world.launch
+roslaunch followbot course.launch
 cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName winder_sim.py
+rosrun packageName white_line_follower_sim.py
 ```
 ### Kobuki Turtlebot
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_bringup 3dsensor.launch
-roslaunch packageName standalone.launch #refer standalone.launch in project files
 roslaunch turtlebot_teleop logitech.launch 
 ```
 If joystick appears on js1 other than js0:
@@ -52,10 +45,10 @@ cd catkin_ws
 source devel/setup.bash
 chmod +x fileName.py
 catkin_make
-rosrun packageName wander.py cmd_vel:=cmd_vel/velocityramp #uses standalone.launch
+rosrun packageName white_line_follower_sim.py 
 ```
 
-### Pursuit Robot
+### Lane Following Robot
 ### Turtlebot Gazebo Simulation
 ```
 roslaunch turtlebot_gazebo turtlebot_world.launch
