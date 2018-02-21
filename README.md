@@ -15,6 +15,14 @@ We tested our project on the following environment.
 * Matplotlib
 * OpenCV-Python 2.4.8
 
+How to configure Gazebo world for line follower:
+clone followbot folder into your_workspace/src. For test 
+'''
+cd your_workspace/src
+roslaunch followbot course.launch
+'''
+In our case, saving followbot files in a src/package didn't work. 
+
 How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
