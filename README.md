@@ -19,8 +19,8 @@ How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 ## How to run 
-### Line Following Robot
-### Turtlebot Gazebo Simulation
+### Line (yellow or white) Following Robot
+#### In Turtlebot Gazebo Simulation
 ```
 roslaunch followbot course.launch
 cd catkin_ws
@@ -28,24 +28,6 @@ source devel/setup.bash
 chmod +x fileName.py
 catkin_make
 rosrun packageName white_line_follower_sim.py
-```
-### Kobuki Turtlebot
-```
-roslaunch turtlebot_bringup minimal.launch
-roslaunch turtlebot_bringup 3dsensor.launch
-roslaunch turtlebot_teleop logitech.launch 
-```
-If joystick appears on js1 other than js0:
-```
-ls -l /dev/input/js1
-roslaunch packageName joy.launch #refer joy.launch in project files
-```
-```
-cd catkin_ws
-source devel/setup.bash
-chmod +x fileName.py
-catkin_make
-rosrun packageName white_line_follower_sim.py 
 ```
 
 ### Lane Following Robot
