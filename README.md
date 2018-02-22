@@ -27,6 +27,23 @@ How to configure Joy:
 http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 ## How to run 
+### Collect Camera Images
+Run the following to record images into the imageFolder of your current directory.
+'''
+mkdir imageFolder
+cd imageFolder
+rosbag record camera/rgb/image_raw --limit=60 -o bagFileName 
+'''
+limit = 60 is the total number of frames collected.
+Initialize joystick or remote keyboard teleop before to maneuver the robot and record.
+
+Run the following to extract raw ROS bag files into JPEG.
+'''
+rosrun packageName rosbag_play.py bagFileName.bag /Folderlocation/ camera/rgb/image_raw
+'''
+
+### Perspective Calibration
+
 ### Line/Lane (yellow or white) Following Robot
 #### In Turtlebot Gazebo Simulation 
 ```
