@@ -17,10 +17,10 @@ We tested our project on the following environment.
 
 How to configure Gazebo world for line follower:
 clone followbot folder into your_workspace/src. For test 
-'''
+```
 cd your_workspace/src
 roslaunch followbot course.launch
-'''
+```
 In our case, saving followbot files in a src/package didn't work. 
 
 How to configure Joy:
@@ -29,18 +29,18 @@ http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 ## How to run 
 ### Collect Camera Images
 Run the following to record images into the imageFolder of your current directory.
-'''
+```
 mkdir imageFolder
 cd imageFolder
 rosbag record camera/rgb/image_raw --limit=60 -o bagFileName 
-'''
+```
 limit = 60 is the total number of frames collected.
 Initialize joystick or remote keyboard teleop before to maneuver the robot and record.
 
 Run the following to extract raw ROS bag files into JPEG.
-'''
+```
 rosrun packageName rosbag_play.py bagFileName.bag /Folderlocation/ camera/rgb/image_raw
-'''
+```
 
 ### Perspective Calibration
 
