@@ -44,6 +44,16 @@ rosrun packageName rosbag_play.py bagFileName.bag /Folderlocation/ camera/rgb/im
 
 ### Perspective Calibration
 
+The perpective transform turns the input image into a top view image so that the lines on either side is more seperable.We can run pers_calibration.py and need to find 4 locations to be transformed into 4 target locations and pass it to perspectivetransform function of opencv.It will return as a homography matrix whcih we shall multiply to transform all the input images to get the birds eye view of the track.
+
+<div align="center">
+  <img src ="img_src/im5.png" width ="200"> <img src ="img_src/im5_pers.jpeg" width ="200"> <img src ="img_src/im4.png" width ="200"> <img src ="img_src/im4_pers.jpeg" width ="200">
+</div>
+<div align="center">
+  <img src ="img_src/im3.png" width ="200"> <img src ="img_src/im3_pers.jpeg" width ="200"> <img src ="img_src/im3.png" width ="200"> <img src ="img_src/im3_pers.jpeg" width ="200">
+</div>
+
+
 ### Line/Lane (yellow or white) Following Robot
 #### In Turtlebot Gazebo Simulation 
 ```
@@ -79,15 +89,31 @@ rosrun packageName white_yellow_lane_follower_sim.py
 ```
 
 ## Project Description
+The steps are as follows:
+* Convert input image into desired perspective transdormation
+* Convert into Grayscale(for detecting white) and HSV(for yellow)
+* Form a mask with binary threshlod to extract ROI for white or yellow line
+* Apply morphological operator to get rid of noise
+* Crop and extract a rectangular region as ROI.
+* Find the moment of the region
+* Declare robots location as an offset from the point of moment (we followed the right line, so offset was a distance on the left of the moment)
+* Calculate error based on differnce between half the image width and robot's location.
+* Run PD over the error to get angular z with a constant linear velocity x
+* Repeat all the steps
 
+<div align="center">
+  <img src ="img_src/im1.png" width ="200"> <img src ="img_src/im1_pers.jpeg" width ="200"> <img src ="img_src/im1_gray.png" width ="200"> <img src ="img_src/im1_hsv.jpeg" width ="200">
+</div>
+<div align="center">
+  <img src ="img_src/im1_morph.jpeg" width ="200"> <img src ="img_src/im1_ROI.jpeg" width ="200"> <img src ="img_src/im1_gray.png" width ="200"> <img src ="img_src/im1_hsv.jpeg" width ="200">
+</div>
 
 
 ## Discussion
-
-
+If the robots somehow turns towards left line , it follows the track in backward direction.Sometimes it misses the line on a very sharp turn as it vanishes from the robot's view.The method also relies on the camera setting and also prone to lighting condition where the thresholds are required tuning.Our robot did well in the competition and finished quite earlier than most of the robots. It also had a penalty as per rule of competition when the body went outside the track at a sharp corner.
 
 ## Future Work
-
+Variable linear motion can be used instead of fixed linear motion which will help in turning. Also path planning ahead of turn might help reduce the the linear speed adjust turning speed for smooth motion.
 
 ## Authors
 
