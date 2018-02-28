@@ -106,7 +106,7 @@ For line following we can find the error with the moment directly.
   <img src ="img_src/im1.png" width ="200"> <img src ="img_src/im1_pers.jpeg" width ="200"> <img src ="img_src/im1_gray.jpeg" width ="200"> <img src ="img_src/im1_hsv.jpeg" width ="200">
 </div>
 <div align="center">
-  <img src ="img_src/im1_binary.png" width ="200"> <img src ="img_src/im1_morph.jpeg" width ="200"> <img src ="img_src/im1_roi.jpeg" width ="200"> <img src ="img_src/im1_dot.jpeg" width ="200">
+  <img src ="img_src/im1_binary.jpeg" width ="200"> <img src ="img_src/im1_morph.jpeg" width ="200"> <img src ="img_src/im1_roi.jpeg" width ="200"> <img src ="img_src/im1_dot.jpeg" width ="200">
 </div>
 
 
