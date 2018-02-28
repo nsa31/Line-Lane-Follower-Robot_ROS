@@ -103,13 +103,22 @@ The steps for Lane Following are as follows:
 For line following we can find the error with the moment directly.
 
 <div align="center">
-  <img src ="img_src/im1.png" width ="200"> <img src ="img_src/im1_pers.jpeg" width ="200"> <img src ="img_src/im1_gray.png" width ="200"> <img src ="img_src/im1_hsv.jpeg" width ="200">
+  <img src ="img_src/im1.png" width ="200"> <img src ="img_src/im1_pers.jpeg" width ="200"> <img src ="img_src/im1_gray.jpeg" width ="200"> <img src ="img_src/im1_hsv.jpeg" width ="200">
+</div>
+<div align="center">
+  <img src ="img_src/im1_binary.png" width ="200"> <img src ="img_src/im1_morph.jpeg" width ="200"> <img src ="img_src/im1_roi.jpeg" width ="200"> <img src ="img_src/im1_dot.jpeg" width ="200">
 </div>
 
 
 ## Performance Video
 <div align="center">
   <a href="https://www.youtube.com/watch?v=YSfXsihIQsc"><img src="https://img.youtube.com/vi/YSfXsihIQsc/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=-dGZnNCPr4A"><img src="https://img.youtube.com/vi/-dGZnNCPr4A/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=XfeCy8dq6mw"><img src="https://img.youtube.com/vi/XfeCy8dq6mw/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
 ## Discussion
