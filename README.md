@@ -50,7 +50,7 @@ The perpective transform turns the input image into a top view image so that the
   <img src ="img_src/im5.png" width ="200"> <img src ="img_src/im5_pers.jpeg" width ="200"> <img src ="img_src/im4.png" width ="200"> <img src ="img_src/im4_pers.jpeg" width ="200">
 </div>
 <div align="center">
-  <img src ="img_src/im3.png" width ="200"> <img src ="img_src/im3_pers.jpeg" width ="200"> <img src ="img_src/im3.png" width ="200"> <img src ="img_src/im3_pers.jpeg" width ="200">
+  <img src ="img_src/im3.png" width ="200"> <img src ="img_src/im3_pers.jpeg" width ="200"> <img src ="img_src/im2.png" width ="200"> <img src ="img_src/im2_pers.jpeg" width ="200">
 </div>
 
 
