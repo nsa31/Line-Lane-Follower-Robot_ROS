@@ -100,6 +100,7 @@ The steps for Lane Following are as follows:
 * Calculate error based on differnce between half the image width and robot's location.
 * Run PD over the error to get angular z with a constant linear velocity x
 * Repeat all the steps
+
 For line following we can find the error with the moment directly.
 
 <div align="center">
